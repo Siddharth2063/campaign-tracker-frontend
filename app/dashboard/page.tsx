@@ -23,15 +23,15 @@ export default function DashboardPage() {
   const [monthlyData, setMonthlyData] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch(`${BASE_URL}/reports/status-summary/`)
+    fetch(`${BASE_URL}/api/reports/status-summary/`)
       .then((r) => r.json())
       .then(setStatusData);
 
-    fetch(`${BASE_URL}/reports/budget-by-platform/`)
+    fetch(`${BASE_URL}/api/reports/budget-by-platform/`)
       .then((r) => r.json())
       .then(setPlatformData);
 
-    fetch(`${BASE_URL}/reports/monthly-trends/`)
+    fetch(`${BASE_URL}/api/reports/monthly-trends/`)
       .then((r) => r.json())
       .then(setMonthlyData);
   }, []);

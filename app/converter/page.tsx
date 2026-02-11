@@ -12,7 +12,7 @@ export default function ConverterPage() {
 
   async function convert() {
     const res = await fetch(
-      `${BASE_URL}/tools/convert-currency/?amount=${amount}&from=${from}&to=${to}`
+      `${BASE_URL}/api/tools/convert-currency/?amount=${amount}&from=${from}&to=${to}`
     );
     const data = await res.json();
     setResult(data);
